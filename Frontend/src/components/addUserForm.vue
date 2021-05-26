@@ -41,13 +41,12 @@
       placeholder="Re-enter password"
     />
     <p v-if="userTaken === true">User already exists</p>
+    <p v-if="!validatePassword && rePassword">Passwords don´t match</p>
     <div class="register-btn">
       <button type="reset">Clear</button>
-      <div v-if="validatePassword">
-        <!-- Kan vara att detta inte funkar-->
-        <button>Create user</button>
+      <div>
+        <button :disabled="!validatePassword || !rePassword">Create user</button>
       </div>
-      <div v-else>Password don´t match</div>
     </div>
   </form>
 </template>
@@ -118,6 +117,10 @@ button:hover {
   background-color: #007973a6;
   transform: scale(1.05);
 }
+button:disabled:hover{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 input:focus {
   outline: none;
 }
@@ -136,5 +139,6 @@ p {
 input{
   padding: 5px 10px;
 }
+
 
 </style>
