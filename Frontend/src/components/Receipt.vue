@@ -12,18 +12,16 @@
           Check in:
           {{
             new Date(receipt.startDate)
-              .toLocaleDateString('se-SE')
-              .split('/')
-              .toString()
+              .toLocaleDateString('sv-SE')
+              .replaceAll('/', '-')
           }}
         </h5>
         <h5>
           Check out:
           {{
             new Date(receipt.endDate)
-              .toLocaleDateString('se-SE')
-              .split('/')
-              .toString()
+              .toLocaleDateString('sv-SE')
+              .replaceAll('/', '-')
           }}
         </h5>
         <p>Adults: {{ receipt.numAdult }}</p>

@@ -8,8 +8,8 @@
     </div>
     <div class="col-2">
       <h2>{{house.city}}</h2>
-      <h4>From: {{new Date(house.availableFrom).toLocaleDateString("se-SE").split("/").toString()}}</h4>
-      <h4>To: {{new Date(house.availableTo).toLocaleDateString("se-SE").split("/").toString()}}</h4>
+      <h4>From: {{new Date(house.availableFrom).toLocaleDateString("sv-SE").replaceAll('/', '-').toString()}}</h4>
+      <h4>To: {{new Date(house.availableTo).toLocaleDateString("sv-SE").replaceAll('/', '-')}}</h4>
       <p>Beds: {{house.availableBeds}}</p>
       <p>Price/night: {{house.price}}$</p>
     </div>
