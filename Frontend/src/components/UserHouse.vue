@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style scoped>
+.receipt-card{
+  font-size: 1.2rem;
+}
   .btns {
         display: grid;
         position: absolute;
