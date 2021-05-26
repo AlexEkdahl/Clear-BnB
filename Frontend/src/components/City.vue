@@ -5,7 +5,7 @@
     <img :src="imageList[0]" alt="" />
     <h3>{{ city.city }}</h3>
     <p>{{ city.description }}</p>
-    <div class="text">Läs mer</div>
+    <div class="text">Read more</div>
   </div>
 </template>
 
@@ -73,6 +73,7 @@ h3 {
 .text {
   grid-area: text;
   text-align: right;
+  font-weight: 600;
 }
 
 p {
