@@ -30,14 +30,14 @@
    class="border-radius border-grey"
       v-model="password"
       required
-      type="text"
+      type="password"
       placeholder="Enter password"
     />
     <input
     class="border-radius border-grey"
       v-model="rePassword"
       required
-      type="text"
+      type="password"
       placeholder="Re-enter password"
     />
     <p v-if="userTaken === true">User already exists</p>
