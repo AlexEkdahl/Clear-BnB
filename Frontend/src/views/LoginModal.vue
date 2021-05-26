@@ -142,4 +142,9 @@ export default {
 h1{
   margin: 20px;
 }
+@media screen and (max-width: 370px){
+  .modal{
+    transform: scale(0.8);
+  }
+}
 </style>
