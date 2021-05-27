@@ -10,12 +10,11 @@
           <div v-else class="user-info">
             <form class="user-info" @submit.prevent="dispatch">
             <input class="border-radius" type="text" v-model="value.firstName" placeholder="Firstname.." required>
-	          <input class="border-radius" type="text" v-model="value.lastName" placeholder="Lastname.." requierd>
-	          <input class="border-radius" type="text" v-model="value.email" placeholder="email.." requierd>
-	          <input class="border-radius" type="number" v-model="value.phoneNumber" placeholder="Phonenumber.." requierd>
-	          <input class="border-radius" type="text" v-model="value.city" placeholder="City.."  requierd>
-	          <input class="border-radius" type="text" v-model="value.address" placeholder="Address.." requierd>
-	          <input class="border-radius" type="text" v-model="value.image" placeholder="Imageurl..." requierd>
+	          <input class="border-radius" type="text" v-model="value.lastName" placeholder="Lastname.." required>
+	          <input class="border-radius" type="text" v-model="value.email" placeholder="email.." required>
+	          <input class="border-radius" type="number" v-model="value.phoneNumber" placeholder="Phonenumber..">
+	          <input class="border-radius" type="text" v-model="value.city" placeholder="City..">
+	          <input class="border-radius" type="text" v-model="value.address" placeholder="Address..">
             <input class="border-radius" type="submit" value="Send">
             </form>
             
