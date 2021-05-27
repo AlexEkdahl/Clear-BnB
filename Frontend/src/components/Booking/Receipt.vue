@@ -12,18 +12,16 @@
           Check in:
           {{
             new Date(receipt.startDate)
-              .toLocaleDateString('se-SE')
-              .split('/')
-              .toString()
+              .toLocaleDateString('sv-SE')
+              .replaceAll('/', '-')
           }}
         </h5>
         <h5>
           Check out:
           {{
             new Date(receipt.endDate)
-              .toLocaleDateString('se-SE')
-              .split('/')
-              .toString()
+              .toLocaleDateString('sv-SE')
+              .replaceAll('/', '-')
           }}
         </h5>
         <p>Adults: {{ receipt.numAdult }}</p>
@@ -130,6 +128,7 @@ button:hover {
   transition: 0.4s;
   background-color: white;
   border: 1px solid rgb(173, 169, 169);
+  font-size: 1.2rem;
 }
 
 .col-1 {
@@ -176,7 +175,6 @@ img {
       'box1 box2'
       'box3 box3';
     width: 500px;
-    font-size: 15px;
     height: fit-content;
     padding: 5px;
   }
@@ -213,7 +211,7 @@ img {
 }
 @media screen and (max-width: 350px) {
   .receipt-card {
-    width: 230px;
+    width: 300px;
   }
 
   p {

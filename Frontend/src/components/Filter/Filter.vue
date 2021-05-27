@@ -32,7 +32,7 @@
         <Calendar class="calendar"><template v-slot:start></template></Calendar>
       </div>
       <div class="price-box">
-        <label class="price" for="vol">Price {{ range }} kr</label>
+        <label class="price" for="vol">Price {{ range }} $</label>
         <input
           @change="filterObjects"
           type="range"

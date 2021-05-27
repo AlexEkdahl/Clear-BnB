@@ -1,58 +1,57 @@
 <template>
   <form @submit.prevent="addUser">
     <input
-    class="border-radius border-grey"
+      class="border-radius border-grey"
       v-model="firstName"
       required
       type="text"
       placeholder="Enter firstname"
     />
     <input
-   class="border-radius border-grey"
+      class="border-radius border-grey"
       v-model="lastName"
       required
       type="text"
       placeholder="Enter lastname"
     />
     <input
-    class="border-radius border-grey"
-     v-model="email"
-      required type="text" 
-      placeholder="Enter email" />
+      class="border-radius border-grey"
+      v-model="email"
+      required
+      type="text"
+      placeholder="Enter email"
+    />
     <input
-    cclass="border-radius border-grey"
+      cclass="border-radius border-grey"
       v-model="phoneNumber"
       required
       type="text"
       placeholder="Enter phonenumber"
     />
     <input
-   class="border-radius border-grey"
+      class="border-radius border-grey"
       v-model="password"
       required
       type="password"
       placeholder="Enter password"
     />
     <input
-    class="border-radius border-grey"
+      class="border-radius border-grey"
       v-model="rePassword"
       required
       type="password"
       placeholder="Re-enter password"
     />
     <p v-if="userTaken === true">User already exists</p>
-
-  <div class="wrongPw">
-   <div v-if="!validatePassword">Passwords don´t match</div>
-    
-  </div>
-
+    <p v-if="!validatePassword && rePassword">Passwords don´t match</p>
     <div class="register-btn">
       <button type="reset">Clear</button>
-      
-        <!-- Kan vara att detta inte funkar-->
-        <button :disabled="!validatePassword">Create user</button>
+      <div>
+        <button :disabled="!validatePassword || !rePassword">
+          Create user
+        </button>
       </div>
+    </div>
   </form>
 </template>
 
@@ -122,12 +121,10 @@ button:hover {
   background-color: #007973a6;
   transform: scale(1.05);
 }
-
-button:disabled{
+button:disabled:hover{
+  cursor: not-allowed;
   opacity: 0.5;
-
 }
-
 input:focus {
   outline: none;
 }
@@ -145,12 +142,6 @@ p {
 
 input{
   padding: 5px 10px;
-}
-
-.wrongPw{
-  font-size: 80%;
-  margin-top: 5px;
-  margin-bottom: -15px ;
 }
 
 </style>
